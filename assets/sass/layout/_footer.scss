@@ -1,0 +1,304 @@
+footer {
+  background: $black;
+  padding: 2.375rem 0;
+  .footer-main-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+    padding-right: 8.813rem;
+    padding-left: 3.438rem;
+    .form-container {
+      display: flex;
+      width: 75%;
+      max-height: 14.43rem;
+      .social-block {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 1.375rem;
+        justify-content: center;
+        align-items: center;
+        i::before {
+          font-size: 1.563rem;
+          color: $mainColor;
+        }
+        .fa-wifi {
+          transform: rotate(45deg);
+          position: relative;
+          left: -4px;
+        }
+      }
+      .news-letter-form {
+        padding-left: 4.532rem;
+        // height:max
+        .form-title {
+          font-family: $subFont;
+          color: $mainColor;
+          font-size: 1.75rem;
+          padding-bottom: 0.688rem;
+          // position:relative;
+          // top:-0.688rem;
+        }
+        .form-block {
+          display: flex;
+          flex-direction: column;
+          gap: 1.313rem;
+          .name-block {
+            display: flex;
+            gap: 1.7rem;
+            input {
+              max-width: 11.25rem;
+              width: 100%;
+              height: 2.625rem;
+            }
+          }
+          .email,
+          .company {
+            input {
+              max-width: 24.188rem;
+              width: 100%;
+              height: 2.625rem;
+            }
+          }
+          ::placeholder {
+            // padding-left: 0.625rem;
+            font-family: $subFont;
+            color: #848484;
+            font-size: 1.125rem;
+          }
+          input {
+            outline: none;
+            border: 1px solid #707070;
+            padding-left: 0.625rem;
+          }
+        }
+      }
+    }
+    .contact-container {
+      text-align: end;
+      width: 25%;
+      .contact-title {
+        font-family: $subFont;
+        font-size: 1.75rem;
+        color: $mainColor;
+      }
+      .address {
+        padding-top: 2.063rem;
+        .address-title {
+          @include fontEighteenBold;
+          color: $white;
+        }
+        .address-subone,
+        .address-subtwo {
+          @include fontEighteenRegular;
+          color: $white;
+          line-height: 1.375rem;
+        }
+        .map a {
+          @include fontEighteenRegular;
+          color: $mainColor;
+        }
+      }
+      .tel-mail-block {
+        padding-top: 2.063rem;
+        .tel {
+          a {
+            @include fontEighteenRegular;
+            color: $white;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+          span {
+            color: $white;
+          }
+        }
+        .mail {
+          a {
+            @include fontEighteenRegular;
+            color: $mainColor;
+            line-height: 1.375rem;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+          span {
+            color: $white;
+          }
+        }
+      }
+      .logo-footer {
+        padding-top: 1.608rem;
+        display: block;
+        img {
+          max-width: 10.313rem;
+          width: 100%;
+          max-height: 8.563rem;
+          height: auto;
+        }
+      }
+    }
+    .footer-navigation {
+      // width:100%;
+      position: absolute;
+      top: 20.7rem;
+      .nav-container {
+        display: flex;
+        margin-left: -1rem;
+        list-style-type: none;
+        li {
+          padding: 1rem 1.25rem;
+          a {
+            @include fontEighteenBold;
+            color: $mainColor;
+          }
+          a:hover {
+            color: $white;
+          }
+        }
+      }
+      .nav-content {
+        @include fontEighteenRegular;
+        color: $white;
+        line-height: 1.375rem;
+      }
+    }
+  }
+}
+.footer-sub-container {
+  height: 4.688rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1330px) {
+  footer {
+    padding-bottom: 2rem;
+    .footer-main-container {
+      flex-direction: column;
+      // padding-right:3.438rem;
+      padding: 0 2.25rem;
+      .form-container {
+        max-height: 100%;
+        width: 100%;
+      }
+      .contact-container {
+        margin-top: 2rem;
+        width: 100%;
+        .logo-footer {
+          position: relative;
+          text-align: start;
+          top: -11rem;
+          img {
+            width: 9.188rem;
+            height: 7.625rem;
+          }
+        }
+      }
+      .footer-navigation {
+        width: 90%;
+        text-align: center;
+        top: 35.7rem;
+        .nav-container {
+          justify-content: center;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  footer {
+    .footer-main-container {
+      .form-container {
+        .news-letter-form {
+          padding-left: 2.875rem;
+          .form-title {
+            font-size: 1.375rem;
+          }
+          .form-block {
+            .name-block {
+              flex-direction: column;
+              input {
+                width: 11.125rem;
+              }
+              ::placeholder {
+                font-size: 1.125rem;
+              }
+            }
+            .email,
+            .company {
+              input {
+                width: 14rem;
+              }
+            }
+          }
+        }
+      }
+      .contact-container {
+        .contact-title {
+          font-size: 1.375rem;
+        }
+        .logo-footer {
+          position: static;
+          text-align: center;
+        }
+      }
+      .footer-navigation {
+        width: 100%;
+        position: static;
+        padding-top: 1.859rem;
+        .nav-container {
+          justify-content: space-between;
+          li {
+            padding: 0;
+            padding-right: 1.313rem;
+          }
+          li:last-child {
+            padding: 0;
+          }
+        }
+        .nav-content {
+          text-align: start;
+          padding-top: 1.313rem;
+        }
+      }
+    }
+  }
+  .footer-sub-container {
+    height: 3.188rem;
+    img {
+      width: 5rem;
+      height: 1.563rem;
+    }
+  }
+}
+
+@media screen and (max-width: 336px) {
+  .sponsers-title {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
+  footer {
+    .footer-main-container {
+      .form-container {
+        .news-letter-form {
+          padding-left: 1.875rem;
+          .form-title {
+            font-size: 1.1rem;
+          }
+          .form-block {
+            .email,
+            .company {
+              input {
+                width: 12rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

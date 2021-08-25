@@ -1,0 +1,218 @@
+.side-navbar {
+  height: 100%;
+  max-width: 13.938rem;
+  width: 100%;
+  background: $black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  .dropdown {
+    .logo {
+      display: block;
+      text-align: center;
+      padding-top: 3.125rem;
+      img {
+        max-height: 8.875rem;
+        height: 100%;
+        height: 8.875rem;
+        max-width: 10.125rem;
+        width: 100%;
+      }
+    }
+    .hamberger {
+      display: none;
+    }
+  }
+  .navigations-items {
+    list-style-type: none;
+    text-align: center;
+    padding-top: 4.25rem;
+    .nav-item {
+      padding: 0.875rem 0.5rem 0.875rem 0;
+      @include fontEighteenBold;
+      position: relative;
+      line-height: 1.375rem;
+      position: relative;
+      .link {
+        @include linkStyles($white);
+        display: block;
+        position: relative;
+      }
+      .link:hover {
+        color: $mainColor;
+      }
+      .link:after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        color: white;
+        float: right;
+        font-size: 0.625rem;
+        //  font: normal normal normal 14px/1 FontAwesome;
+        font-weight: 600;
+      }
+      .navigation-submenu {
+        display: none;
+        background: $white;
+        position: absolute;
+        left: 14rem;
+        top: 0;
+        width: 100%;
+        padding: 0.75rem 0rem;
+        list-style-type: none;
+        width: 15.938rem;
+        .sub-list {
+          @include fontEighteenRegular;
+          a {
+            @include linkStyles($black);
+            padding: 0.438rem 1.031rem;
+            display: block;
+          }
+          a:hover {
+            color: $white;
+          }
+        }
+        .sub-list:hover {
+          background: $mainColor;
+          color: $white;
+        }
+      }
+    }
+    .link:hover:after {
+      content: "";
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 12px solid $black;
+      position: absolute;
+      z-index: 3;
+      right: -1.2rem;
+    }
+    .nav-item:hover {
+      color: $mainColor;
+    }
+  }
+  .donate-link {
+    padding: 2.13rem 0 2.13rem 0;
+    background: $mainColor;
+    display: block;
+    text-align: center;
+    @include fontEighteenBold;
+    @include linkStyles($white);
+    line-height: 1.375rem;
+    margin-top: 0.875rem;
+  }
+  .donate-link:hover {
+    background-color: #d91c11;
+  }
+}
+
+@media screen and (max-width: 1910px) {
+  .side-navbar {
+    .logo {
+      img {
+        width: 9.375rem;
+      }
+    }
+    .navigations-items {
+      padding-top: 3.25rem;
+      .nav-item {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .side-navbar {
+    max-width: 100%;
+    position: static;
+    position: sticky;
+    .dropdown {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 36px;
+      .logo {
+        padding-top: 0;
+        img {
+          width: 84px;
+          height: 70px;
+        }
+      }
+      .hamberger {
+        display: block;
+        @include alignCenter;
+        span:before {
+          font-size: 2.375rem;
+          color: $white;
+        }
+      }
+    }
+    .navigation-block {
+      padding-top: 0;
+      display: none;
+      position: fixed;
+      height: 100%;
+      padding-bottom: 8rem;
+      left: 0px;
+      top: 90px;
+      max-height: 100%;
+      width: 100%;
+      overflow-y: scroll;
+      z-index: 2;
+      background: black;
+      .navigations-items {
+        padding-top: 2.813rem;
+        .nav-item {
+          font-size: 1.688rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0.875rem 0.5rem 0.875rem 0.5rem;
+          .link:after {
+            content: "";
+          }
+          .link:hover {
+            color: $white;
+          }
+          .navigation-submenu {
+            position: relative;
+            top: 3px;
+            left: 0;
+          }
+        }
+        .link:hover:after {
+          // right:0;
+          top: 18px;
+          right: 50%;
+          transform: rotate(90deg);
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .side-navbar {
+    .navigation-block {
+      .navigations-items {
+        .nav-item {
+          padding: 1rem 0;
+        }
+      }
+      .donate-block {
+        text-align: center;
+        margin-top: 2rem;
+        .donate-link {
+          display: inline-block;
+          margin: 0;
+          max-width: 13.75rem;
+          width: 100%;
+          height: 4.438rem;
+          padding: 1.5rem;
+        }
+      }
+    }
+  }
+}

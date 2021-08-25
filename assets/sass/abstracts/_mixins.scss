@@ -1,0 +1,51 @@
+@mixin linkStyles($color) {
+  color: $color;
+  text-decoration: none;
+}
+
+@mixin fontEighteenBold {
+  font-family: $headFont;
+  font-size: 1.125rem;
+}
+
+@mixin fontEighteenRegular {
+  font-family: $subFont;
+  font-size: 1.125rem;
+}
+
+@mixin fontThirtyTwoBold {
+  font-family: $headFont;
+  font-size: 2rem;
+  line-height: 2.438rem;
+}
+@mixin alignCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin next{
+    transform: rotate(90deg);
+    right: -20px;
+}
+
+@mixin nextBefore{
+    content: "\e900";
+    font-family: "icomoon";
+    font-size: 1rem;
+    color: $mainColor;
+    opacity: 10;
+}
+
+@mixin prev{
+    transform: rotate(270deg);
+    left: -20px;
+}
+
+@mixin prevBefore{
+    content: "\e900";
+    font-family: "icomoon";
+    font-size: 1rem;
+    color: $mainColor;
+    opacity: 10;
+}

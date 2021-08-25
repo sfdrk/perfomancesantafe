@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+ol,
+ul,
+dl {
+  margin-bottom: 0;
+}
+
+.next {
+  content: "" !important;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
